@@ -14,7 +14,7 @@ namespace TriumphSupportUtility_Client
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
-            if (!(new WindowsPrincipal(WindowsIdentity.GetCurrent()).IsInRole(WindowsBuiltInRole.Administrator)))
+            if ((new WindowsPrincipal(WindowsIdentity.GetCurrent()).IsInRole(WindowsBuiltInRole.Administrator)))
                 Application.Run(new WinForm_AdminClient());
             else
                 Application.Run(new WinForm_UserClient());

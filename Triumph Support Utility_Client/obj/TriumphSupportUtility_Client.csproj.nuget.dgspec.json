@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Daniel.Mullings\\Desktop\\Triumph-Support-Utility\\Triumph Support Utility_Client\\TriumphSupportUtility_Client.csproj": {}
+    "C:\\Users\\Daniel.Mullings\\Documents\\GitHub\\Triumph-Support-Utility\\Triumph Support Utility_Client\\TriumphSupportUtility_Client.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Daniel.Mullings\\Desktop\\Triumph-Support-Utility\\Triumph Support Utility_Client\\TriumphSupportUtility_Client.csproj": {
+    "C:\\Users\\Daniel.Mullings\\Documents\\GitHub\\Triumph-Support-Utility\\Triumph Support Utility_Client\\TriumphSupportUtility_Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Daniel.Mullings\\Desktop\\Triumph-Support-Utility\\Triumph Support Utility_Client\\TriumphSupportUtility_Client.csproj",
+        "projectUniqueName": "C:\\Users\\Daniel.Mullings\\Documents\\GitHub\\Triumph-Support-Utility\\Triumph Support Utility_Client\\TriumphSupportUtility_Client.csproj",
         "projectName": "Triumph Support Utility - Client",
-        "projectPath": "C:\\Users\\Daniel.Mullings\\Desktop\\Triumph-Support-Utility\\Triumph Support Utility_Client\\TriumphSupportUtility_Client.csproj",
+        "projectPath": "C:\\Users\\Daniel.Mullings\\Documents\\GitHub\\Triumph-Support-Utility\\Triumph Support Utility_Client\\TriumphSupportUtility_Client.csproj",
         "packagesPath": "C:\\Users\\Daniel.Mullings\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Daniel.Mullings\\Desktop\\Triumph-Support-Utility\\Triumph Support Utility_Client\\obj\\",
+        "outputPath": "C:\\Users\\Daniel.Mullings\\Documents\\GitHub\\Triumph-Support-Utility\\Triumph Support Utility_Client\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Daniel.Mullings\\AppData\\Roaming\\NuGet\\NuGet.Config",

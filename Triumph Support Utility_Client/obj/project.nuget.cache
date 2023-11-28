@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KgcCSTXvUPO3ty6YfBy2ezKZues5jG/xGyVGVG3xtQombm1FrBBGdGbYL8QfC5jXoMWChcbsvKNtIJ445nhl/g==",
+  "dgSpecHash": "VxQPaNsRg0ofvmhxonWGwC9OiRVxFmJ7AZ1xEu4foacKA0s2bBs3LzNygmoiK1MH21j2Ud5E6AfyaMY17x9HQQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Daniel.Mullings\\Desktop\\Triumph-Support-Utility\\Triumph Support Utility_Client\\TriumphSupportUtility_Client.csproj",
+  "projectFilePath": "C:\\Users\\Daniel.Mullings\\Documents\\GitHub\\Triumph-Support-Utility\\Triumph Support Utility_Client\\TriumphSupportUtility_Client.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Daniel.Mullings\\.nuget\\packages\\microsoft.extensions.configuration\\7.0.0\\microsoft.extensions.configuration.7.0.0.nupkg.sha512",
     "C:\\Users\\Daniel.Mullings\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",

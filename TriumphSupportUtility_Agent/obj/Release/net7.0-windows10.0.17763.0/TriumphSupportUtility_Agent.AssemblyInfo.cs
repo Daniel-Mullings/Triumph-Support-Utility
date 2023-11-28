@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Triumph Support Utility - Agent")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a38f9010845616663962d6075f4455f53427818a")]
 [assembly: System.Reflection.AssemblyProductAttribute("Triumph Support Utility - Agent")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Triumph Support Utility - Agent")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
