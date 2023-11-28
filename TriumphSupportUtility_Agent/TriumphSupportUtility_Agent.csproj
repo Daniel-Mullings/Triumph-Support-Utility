@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0-windows10.0.17763.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-TriumphSupportUtility_Agent-7f201eec-26ca-44f9-863e-aca70bee8dab</UserSecretsId>
+    <ApplicationIcon>triumphIcon.ico</ApplicationIcon>
+    <AssemblyName>Triumph Support Utility - Agent</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\TriumphSupportUtility.cs" Link="TriumphSupportUtility.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="triumphIcon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Toolkit.Uwp.Notifications" Version="7.1.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.DirectoryServices.AccountManagement" Version="7.0.1" />
+    <PackageReference Include="System.Management" Version="7.0.2" />
+    <PackageReference Include="System.ServiceProcess.ServiceController" Version="7.0.1" />
+	<PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
+	<PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="7.0.1" />
+  </ItemGroup>
+	
+  <ItemGroup>
+	<FrameworkReference Include="Microsoft.WindowsDesktop.App" />
+  </ItemGroup>
+	
+  <ItemGroup>
+    <Content Update="config.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,83 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows10.0.17763.0</TargetFramework>
+    <RootNamespace>TriumphSupportUtility_Client</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>Resources\triumphIcon.ico</ApplicationIcon>
+    <LangVersion>preview</LangVersion>
+    <SupportedOSPlatformVersion>10.0.17763.0</SupportedOSPlatformVersion>
+    <AssemblyName>Triumph Support Utility - Client</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Scripts\Map_Drives.vbs" />
+    <None Remove="Scripts\Printer_Install.bat" />
+    <None Remove="Scripts\Snow_Scan.bat" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="..\TriumphSupportUtility.cs" Link="TriumphSupportUtility.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Scripts\Printer_Install.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\Snow_Scan.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\Map_Drives.vbs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\triumphIcon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="WinForms_Ancillaries\WinForm_BroadcastNotification.cs">
+      <SubType>Form</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="WinForms_Ancillaries\WinForm_ClientConnect.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="WinForms_Ancillaries\WinForm_PrinterInstall.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="WinForm_UserClient.cs" />
+    <Compile Update="WinForm_AdminClient.cs" />
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
+    <PackageReference Include="Microsoft.Toolkit.Uwp.Notifications" Version="7.1.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.DirectoryServices.AccountManagement" Version="7.0.1" />
+    <PackageReference Include="System.Drawing.Common" Version="8.0.0-rc.2.23479.14" />
+    <PackageReference Include="System.Management" Version="7.0.2" />
+    <PackageReference Include="System.ServiceProcess.ServiceController" Version="7.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="config.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

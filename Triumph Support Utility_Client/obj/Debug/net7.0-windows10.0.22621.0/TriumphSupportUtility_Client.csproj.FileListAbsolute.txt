@@ -1,0 +1,11 @@
+C:\Users\Danie\Source\Repos\Daniel-Mullings\Triumph-Support-Utility\Triumph Support Utility\obj\Debug\net7.0-windows10.0.22621.0\TriumphSupportUtility_Client.csproj.AssemblyReference.cache
+C:\Users\Danie\Source\Repos\Daniel-Mullings\Triumph-Support-Utility\Triumph Support Utility\obj\Debug\net7.0-windows10.0.22621.0\Triumph_Support_Utility.Properties.Resources.resources
+C:\Users\Danie\Source\Repos\Daniel-Mullings\Triumph-Support-Utility\Triumph Support Utility\obj\Debug\net7.0-windows10.0.22621.0\Triumph_Support_Utility.WinForm_AdminClient_GetClientAddress.resources
+C:\Users\Danie\Source\Repos\Daniel-Mullings\Triumph-Support-Utility\Triumph Support Utility\obj\Debug\net7.0-windows10.0.22621.0\Triumph_Support_Utility.WinForm_PrinterInstall.resources
+C:\Users\Danie\Source\Repos\Daniel-Mullings\Triumph-Support-Utility\Triumph Support Utility\obj\Debug\net7.0-windows10.0.22621.0\Triumph_Support_Utility.WinForm_AdminClient.resources
+C:\Users\Danie\Source\Repos\Daniel-Mullings\Triumph-Support-Utility\Triumph Support Utility\obj\Debug\net7.0-windows10.0.22621.0\Triumph_Support_Utility.WinForm_UserClient.resources
+C:\Users\Danie\Source\Repos\Daniel-Mullings\Triumph-Support-Utility\Triumph Support Utility\obj\Debug\net7.0-windows10.0.22621.0\TriumphSupportUtility_Client.csproj.GenerateResource.cache
+C:\Users\Danie\Source\Repos\Daniel-Mullings\Triumph-Support-Utility\Triumph Support Utility\obj\Debug\net7.0-windows10.0.22621.0\TriumphSupportUtility_Client.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Danie\Source\Repos\Daniel-Mullings\Triumph-Support-Utility\Triumph Support Utility\obj\Debug\net7.0-windows10.0.22621.0\TriumphSupportUtility_Client.AssemblyInfoInputs.cache
+C:\Users\Danie\Source\Repos\Daniel-Mullings\Triumph-Support-Utility\Triumph Support Utility\obj\Debug\net7.0-windows10.0.22621.0\TriumphSupportUtility_Client.AssemblyInfo.cs
+C:\Users\Danie\Source\Repos\Daniel-Mullings\Triumph-Support-Utility\Triumph Support Utility\obj\Debug\net7.0-windows10.0.22621.0\TriumphSupportUtility_Client.csproj.CoreCompileInputs.cache
