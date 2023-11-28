@@ -1,0 +1,8 @@
+C:\Users\Danie\Desktop\Triumph Support Utility.pdb
+C:\Users\Danie\Desktop\Resources\Scripts\Map_Drives.vbs
+C:\Users\Danie\Desktop\D3DCompiler_47_cor3.dll
+C:\Users\Danie\Desktop\PenImc_cor3.dll
+C:\Users\Danie\Desktop\PresentationNative_cor3.dll
+C:\Users\Danie\Desktop\vcruntime140_cor3.dll
+C:\Users\Danie\Desktop\wpfgfx_cor3.dll
+C:\Users\Danie\Desktop\Triumph Support Utility.exe

@@ -1,0 +1,9 @@
+C:\Users\Danie\Desktop\Resources\Scripts\Map_Drives.vbs
+C:\Users\Danie\Desktop\Triumph Support Utility.exe
+C:\Users\Danie\Desktop\Triumph Support Utility.dll
+C:\Users\Danie\Desktop\Triumph Support Utility.deps.json
+C:\Users\Danie\Desktop\Triumph Support Utility.runtimeconfig.json
+C:\Users\Danie\Desktop\Triumph Support Utility.pdb
+C:\Users\Danie\Desktop\System.CodeDom.dll
+C:\Users\Danie\Desktop\System.Management.dll
+C:\Users\Danie\Desktop\runtimes\win\lib\net6.0\System.Management.dll

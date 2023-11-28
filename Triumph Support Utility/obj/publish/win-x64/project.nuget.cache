@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "/y1mrPMuHsrYlxCxHxkklEAToSTNJJNS7kfNNer4hA7rcwzQmWeW9456sCZjKECLkKSNxSOJGQoRAD3or2v29A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Danie\\Source\\Repos\\Daniel-Mullings\\Triumph-Support-Utility\\Triumph Support Utility\\Triumph Support Utility.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Danie\\.nuget\\packages\\system.codedom\\7.0.0\\system.codedom.7.0.0.nupkg.sha512",
+    "C:\\Users\\Danie\\.nuget\\packages\\system.management\\7.0.2\\system.management.7.0.2.nupkg.sha512",
+    "C:\\Users\\Danie\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\6.0.19\\microsoft.netcore.app.runtime.win-x64.6.0.19.nupkg.sha512",
+    "C:\\Users\\Danie\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\6.0.19\\microsoft.windowsdesktop.app.runtime.win-x64.6.0.19.nupkg.sha512",
+    "C:\\Users\\Danie\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\6.0.19\\microsoft.aspnetcore.app.runtime.win-x64.6.0.19.nupkg.sha512",
+    "C:\\Users\\Danie\\.nuget\\packages\\microsoft.netcore.app.crossgen2.win-x64\\6.0.19\\microsoft.netcore.app.crossgen2.win-x64.6.0.19.nupkg.sha512"
+  ],
+  "logs": []
+}

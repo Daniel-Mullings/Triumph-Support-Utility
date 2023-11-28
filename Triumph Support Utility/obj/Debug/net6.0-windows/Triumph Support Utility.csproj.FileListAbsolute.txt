@@ -1,0 +1,113 @@
+C:\Users\Danie\source\repos\Triumph Support Utility\Triumph Support Utility\bin\Debug\net6.0-windows\Triumph Support Utility.exe
+C:\Users\Danie\source\repos\Triumph Support Utility\Triumph Support Utility\bin\Debug\net6.0-windows\Triumph Support Utility.deps.json
+C:\Users\Danie\source\repos\Triumph Support Utility\Triumph Support Utility\bin\Debug\net6.0-windows\Triumph Support Utility.runtimeconfig.json
+C:\Users\Danie\source\repos\Triumph Support Utility\Triumph Support Utility\bin\Debug\net6.0-windows\Triumph Support Utility.dll
+C:\Users\Danie\source\repos\Triumph Support Utility\Triumph Support Utility\bin\Debug\net6.0-windows\Triumph Support Utility.pdb
+C:\Users\Danie\source\repos\Triumph Support Utility\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph Support Utility.csproj.GenerateResource.cache
+C:\Users\Danie\source\repos\Triumph Support Utility\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph Support Utility.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Danie\source\repos\Triumph Support Utility\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph Support Utility.AssemblyInfoInputs.cache
+C:\Users\Danie\source\repos\Triumph Support Utility\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph Support Utility.AssemblyInfo.cs
+C:\Users\Danie\source\repos\Triumph Support Utility\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph Support Utility.csproj.CoreCompileInputs.cache
+C:\Users\Danie\source\repos\Triumph Support Utility\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph Support Utility.dll
+C:\Users\Danie\source\repos\Triumph Support Utility\Triumph Support Utility\obj\Debug\net6.0-windows\refint\Triumph Support Utility.dll
+C:\Users\Danie\source\repos\Triumph Support Utility\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph Support Utility.pdb
+C:\Users\Danie\source\repos\Triumph Support Utility\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph Support Utility.genruntimeconfig.cache
+C:\Users\Danie\source\repos\Triumph Support Utility\Triumph Support Utility\obj\Debug\net6.0-windows\ref\Triumph Support Utility.dll
+C:\Users\Danie\source\repos\Triumph Support Utility\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph_Support_Utility.Properties.Resources.resources
+C:\Users\Danie\source\repos\Triumph Support Utility\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph_Support_Utility.mainForm.resources
+C:\Users\Danie\source\repos\Daniel-Mullings\Triumph-Support-Utility\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph Support Utility.csproj.GenerateResource.cache
+C:\Users\Danie\source\repos\Daniel-Mullings\Triumph-Support-Utility\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph Support Utility.dll
+C:\Users\Danie\source\repos\Daniel-Mullings\Triumph-Support-Utility\Triumph Support Utility\obj\Debug\net6.0-windows\refint\Triumph Support Utility.dll
+C:\Users\Danie\source\repos\Daniel-Mullings\Triumph-Support-Utility\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph Support Utility.pdb
+C:\Users\Danie\source\repos\Daniel-Mullings\Triumph-Support-Utility\Triumph Support Utility\bin\Debug\net6.0-windows\Triumph Support Utility.exe
+C:\Users\Danie\source\repos\Daniel-Mullings\Triumph-Support-Utility\Triumph Support Utility\bin\Debug\net6.0-windows\Triumph Support Utility.deps.json
+C:\Users\Danie\source\repos\Daniel-Mullings\Triumph-Support-Utility\Triumph Support Utility\bin\Debug\net6.0-windows\Triumph Support Utility.runtimeconfig.json
+C:\Users\Danie\source\repos\Daniel-Mullings\Triumph-Support-Utility\Triumph Support Utility\bin\Debug\net6.0-windows\Triumph Support Utility.dll
+C:\Users\Danie\source\repos\Daniel-Mullings\Triumph-Support-Utility\Triumph Support Utility\bin\Debug\net6.0-windows\Triumph Support Utility.pdb
+C:\Users\Danie\source\repos\Daniel-Mullings\Triumph-Support-Utility\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph_Support_Utility.Properties.Resources.resources
+C:\Users\Danie\source\repos\Daniel-Mullings\Triumph-Support-Utility\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph Support Utility.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Danie\source\repos\Daniel-Mullings\Triumph-Support-Utility\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph Support Utility.AssemblyInfoInputs.cache
+C:\Users\Danie\source\repos\Daniel-Mullings\Triumph-Support-Utility\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph Support Utility.AssemblyInfo.cs
+C:\Users\Danie\source\repos\Daniel-Mullings\Triumph-Support-Utility\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph Support Utility.csproj.CoreCompileInputs.cache
+C:\Users\Danie\source\repos\Daniel-Mullings\Triumph-Support-Utility\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph Support Utility.genruntimeconfig.cache
+C:\Users\Danie\source\repos\Daniel-Mullings\Triumph-Support-Utility\Triumph Support Utility\obj\Debug\net6.0-windows\ref\Triumph Support Utility.dll
+C:\Users\Danie\Source\Repos\Daniel-Mullings\Triumph-Support-Utility\Triumph Support Utility\bin\Debug\net6.0-windows\System.CodeDom.dll
+C:\Users\Danie\Source\Repos\Daniel-Mullings\Triumph-Support-Utility\Triumph Support Utility\bin\Debug\net6.0-windows\System.Management.dll
+C:\Users\Danie\Source\Repos\Daniel-Mullings\Triumph-Support-Utility\Triumph Support Utility\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Management.dll
+C:\Users\Danie\Source\Repos\Daniel-Mullings\Triumph-Support-Utility\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph Support Utility.csproj.AssemblyReference.cache
+C:\Users\Danie\Source\Repos\Daniel-Mullings\Triumph-Support-Utility\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph Support Utility.csproj.CopyComplete
+C:\Users\Daniel.Mullings\Documents\GitHub\Triumph-Support-Utility\Triumph Support Utility\bin\Debug\net6.0-windows\Triumph Support Utility.exe
+C:\Users\Daniel.Mullings\Documents\GitHub\Triumph-Support-Utility\Triumph Support Utility\bin\Debug\net6.0-windows\Triumph Support Utility.deps.json
+C:\Users\Daniel.Mullings\Documents\GitHub\Triumph-Support-Utility\Triumph Support Utility\bin\Debug\net6.0-windows\Triumph Support Utility.runtimeconfig.json
+C:\Users\Daniel.Mullings\Documents\GitHub\Triumph-Support-Utility\Triumph Support Utility\bin\Debug\net6.0-windows\Triumph Support Utility.dll
+C:\Users\Daniel.Mullings\Documents\GitHub\Triumph-Support-Utility\Triumph Support Utility\bin\Debug\net6.0-windows\Triumph Support Utility.pdb
+C:\Users\Daniel.Mullings\Documents\GitHub\Triumph-Support-Utility\Triumph Support Utility\bin\Debug\net6.0-windows\System.CodeDom.dll
+C:\Users\Daniel.Mullings\Documents\GitHub\Triumph-Support-Utility\Triumph Support Utility\bin\Debug\net6.0-windows\System.Management.dll
+C:\Users\Daniel.Mullings\Documents\GitHub\Triumph-Support-Utility\Triumph Support Utility\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Management.dll
+C:\Users\Daniel.Mullings\Documents\GitHub\Triumph-Support-Utility\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph Support Utility.csproj.AssemblyReference.cache
+C:\Users\Daniel.Mullings\Documents\GitHub\Triumph-Support-Utility\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph_Support_Utility.Properties.Resources.resources
+C:\Users\Daniel.Mullings\Documents\GitHub\Triumph-Support-Utility\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph Support Utility.csproj.GenerateResource.cache
+C:\Users\Daniel.Mullings\Documents\GitHub\Triumph-Support-Utility\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph Support Utility.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Daniel.Mullings\Documents\GitHub\Triumph-Support-Utility\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph Support Utility.AssemblyInfoInputs.cache
+C:\Users\Daniel.Mullings\Documents\GitHub\Triumph-Support-Utility\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph Support Utility.AssemblyInfo.cs
+C:\Users\Daniel.Mullings\Documents\GitHub\Triumph-Support-Utility\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph Support Utility.csproj.CoreCompileInputs.cache
+C:\Users\Daniel.Mullings\Documents\GitHub\Triumph-Support-Utility\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph Support Utility.csproj.CopyComplete
+C:\Users\Daniel.Mullings\Documents\GitHub\Triumph-Support-Utility\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph Support Utility.dll
+C:\Users\Daniel.Mullings\Documents\GitHub\Triumph-Support-Utility\Triumph Support Utility\obj\Debug\net6.0-windows\refint\Triumph Support Utility.dll
+C:\Users\Daniel.Mullings\Documents\GitHub\Triumph-Support-Utility\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph Support Utility.pdb
+C:\Users\Daniel.Mullings\Documents\GitHub\Triumph-Support-Utility\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph Support Utility.genruntimeconfig.cache
+C:\Users\Daniel.Mullings\Documents\GitHub\Triumph-Support-Utility\Triumph Support Utility\obj\Debug\net6.0-windows\ref\Triumph Support Utility.dll
+C:\Users\Daniel.Mullings\Documents\GitHub\Triumph-Support-Utility\Triumph Support Utility\bin\Debug\net6.0-windows\Scripts\Map_Drives.vbs
+C:\Users\Danie\Source\Repos\Daniel-Mullings\Triumph-Support-Utility\Triumph Support Utility\bin\Debug\net6.0-windows\Scripts\Map_Drives.vbs
+C:\Users\Danie\Source\Repos\Daniel-Mullings\Triumph-Support-Utility\Triumph Support Utility\bin\Debug\net6.0-windows\WinForm_Main.cs
+C:\Users\Danie\Source\Repos\Daniel-Mullings\Triumph-Support-Utility\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph_Support_Utility.WinForm_Main.resources
+C:\Users\Danie\Source\Repos\Daniel-Mullings\Triumph-Support-Utility\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph_Support_Utility.WinForm_ProgressBar.resources
+C:\Users\Daniel.Mullings\Documents\GitHub\Triumph-Support-Utility\Triumph Support Utility\bin\Debug\net6.0-windows\WinForm_Main.cs
+C:\Users\Daniel.Mullings\Documents\GitHub\Triumph-Support-Utility\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph_Support_Utility.WinForm_Main.resources
+C:\Users\Daniel.Mullings\Documents\GitHub\Triumph-Support-Utility\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph_Support_Utility.WinForm_ProgressBar.resources
+C:\Users\Danie\Source\Repos\Daniel-Mullings\Triumph-Support-Utility\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph Support Utility.sourcelink.json
+C:\Users\Danie\Source\Repos\Daniel-Mullings\Triumph-Support-Utility\Triumph Support Utility\bin\Debug\net6.0-windows\System.Diagnostics.EventLog.dll
+C:\Users\Danie\Source\Repos\Daniel-Mullings\Triumph-Support-Utility\Triumph Support Utility\bin\Debug\net6.0-windows\System.ServiceProcess.ServiceController.dll
+C:\Users\Danie\Source\Repos\Daniel-Mullings\Triumph-Support-Utility\Triumph Support Utility\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.Messages.dll
+C:\Users\Danie\Source\Repos\Daniel-Mullings\Triumph-Support-Utility\Triumph Support Utility\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.dll
+C:\Users\Danie\Source\Repos\Daniel-Mullings\Triumph-Support-Utility\Triumph Support Utility\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.ServiceProcess.ServiceController.dll
+C:\Users\Daniel.Mullings\Documents\GitHub\Triumph-Support-Utility\Triumph Support Utility\bin\Debug\net6.0-windows\System.Diagnostics.EventLog.dll
+C:\Users\Daniel.Mullings\Documents\GitHub\Triumph-Support-Utility\Triumph Support Utility\bin\Debug\net6.0-windows\System.ServiceProcess.ServiceController.dll
+C:\Users\Daniel.Mullings\Documents\GitHub\Triumph-Support-Utility\Triumph Support Utility\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.Messages.dll
+C:\Users\Daniel.Mullings\Documents\GitHub\Triumph-Support-Utility\Triumph Support Utility\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.dll
+C:\Users\Daniel.Mullings\Documents\GitHub\Triumph-Support-Utility\Triumph Support Utility\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.ServiceProcess.ServiceController.dll
+C:\Users\Danie\source\Repos\Daniel-Mullings\Triumph-Support-Utility_OLD\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph Support Utility.csproj.AssemblyReference.cache
+C:\Users\Danie\source\Repos\Daniel-Mullings\Triumph-Support-Utility_OLD\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph_Support_Utility.Properties.Resources.resources
+C:\Users\Danie\source\Repos\Daniel-Mullings\Triumph-Support-Utility_OLD\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph_Support_Utility.WinForm_Main.resources
+C:\Users\Danie\source\Repos\Daniel-Mullings\Triumph-Support-Utility_OLD\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph_Support_Utility.WinForm_ProgressBar.resources
+C:\Users\Danie\source\Repos\Daniel-Mullings\Triumph-Support-Utility_OLD\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph Support Utility.csproj.GenerateResource.cache
+C:\Users\Danie\source\Repos\Daniel-Mullings\Triumph-Support-Utility_OLD\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph Support Utility.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Danie\source\Repos\Daniel-Mullings\Triumph-Support-Utility_OLD\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph Support Utility.AssemblyInfoInputs.cache
+C:\Users\Danie\source\Repos\Daniel-Mullings\Triumph-Support-Utility_OLD\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph Support Utility.AssemblyInfo.cs
+C:\Users\Danie\source\Repos\Daniel-Mullings\Triumph-Support-Utility_OLD\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph Support Utility.csproj.CoreCompileInputs.cache
+C:\Users\Danie\source\Repos\Daniel-Mullings\Triumph-Support-Utility_OLD\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph Support Utility.sourcelink.json
+C:\Users\Danie\source\Repos\Daniel-Mullings\Triumph-Support-Utility_OLD\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph Support Utility.dll
+C:\Users\Danie\source\Repos\Daniel-Mullings\Triumph-Support-Utility_OLD\Triumph Support Utility\obj\Debug\net6.0-windows\refint\Triumph Support Utility.dll
+C:\Users\Danie\source\Repos\Daniel-Mullings\Triumph-Support-Utility_OLD\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph Support Utility.pdb
+C:\Users\Danie\source\Repos\Daniel-Mullings\Triumph-Support-Utility_OLD\Triumph Support Utility\bin\Debug\net6.0-windows\Triumph Support Utility.exe
+C:\Users\Danie\source\Repos\Daniel-Mullings\Triumph-Support-Utility_OLD\Triumph Support Utility\bin\Debug\net6.0-windows\Scripts\Map_Drives.vbs
+C:\Users\Danie\source\Repos\Daniel-Mullings\Triumph-Support-Utility_OLD\Triumph Support Utility\bin\Debug\net6.0-windows\WinForm_Main.cs
+C:\Users\Danie\source\Repos\Daniel-Mullings\Triumph-Support-Utility_OLD\Triumph Support Utility\bin\Debug\net6.0-windows\Triumph Support Utility.deps.json
+C:\Users\Danie\source\Repos\Daniel-Mullings\Triumph-Support-Utility_OLD\Triumph Support Utility\bin\Debug\net6.0-windows\Triumph Support Utility.runtimeconfig.json
+C:\Users\Danie\source\Repos\Daniel-Mullings\Triumph-Support-Utility_OLD\Triumph Support Utility\bin\Debug\net6.0-windows\Triumph Support Utility.dll
+C:\Users\Danie\source\Repos\Daniel-Mullings\Triumph-Support-Utility_OLD\Triumph Support Utility\bin\Debug\net6.0-windows\Triumph Support Utility.pdb
+C:\Users\Danie\source\Repos\Daniel-Mullings\Triumph-Support-Utility_OLD\Triumph Support Utility\bin\Debug\net6.0-windows\System.CodeDom.dll
+C:\Users\Danie\source\Repos\Daniel-Mullings\Triumph-Support-Utility_OLD\Triumph Support Utility\bin\Debug\net6.0-windows\System.Diagnostics.EventLog.dll
+C:\Users\Danie\source\Repos\Daniel-Mullings\Triumph-Support-Utility_OLD\Triumph Support Utility\bin\Debug\net6.0-windows\System.Management.dll
+C:\Users\Danie\source\Repos\Daniel-Mullings\Triumph-Support-Utility_OLD\Triumph Support Utility\bin\Debug\net6.0-windows\System.ServiceProcess.ServiceController.dll
+C:\Users\Danie\source\Repos\Daniel-Mullings\Triumph-Support-Utility_OLD\Triumph Support Utility\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.Messages.dll
+C:\Users\Danie\source\Repos\Daniel-Mullings\Triumph-Support-Utility_OLD\Triumph Support Utility\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.dll
+C:\Users\Danie\source\Repos\Daniel-Mullings\Triumph-Support-Utility_OLD\Triumph Support Utility\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Management.dll
+C:\Users\Danie\source\Repos\Daniel-Mullings\Triumph-Support-Utility_OLD\Triumph Support Utility\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.ServiceProcess.ServiceController.dll
+C:\Users\Danie\source\Repos\Daniel-Mullings\Triumph-Support-Utility_OLD\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph Support Utility.csproj.CopyComplete
+C:\Users\Danie\source\Repos\Daniel-Mullings\Triumph-Support-Utility_OLD\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph Support Utility.genruntimeconfig.cache
+C:\Users\Danie\source\Repos\Daniel-Mullings\Triumph-Support-Utility_OLD\Triumph Support Utility\obj\Debug\net6.0-windows\ref\Triumph Support Utility.dll
+C:\Users\Danie\source\Repos\Daniel-Mullings\Triumph-Support-Utility_OLD\Triumph Support Utility\bin\Debug\net6.0-windows\Scripts\Snow_Scan.bat
+C:\Users\Daniel.Mullings\Documents\GitHub\Triumph-Support-Utility\Triumph Support Utility\bin\Debug\net6.0-windows\Scripts\Snow_Scan.bat
+C:\Users\Daniel.Mullings\Documents\GitHub\Triumph-Support-Utility\Triumph Support Utility\obj\Debug\net6.0-windows\Triumph Support Utility.sourcelink.json
+C:\Users\Danie\Source\Repos\Daniel-Mullings\Triumph-Support-Utility\Triumph Support Utility\bin\Debug\net6.0-windows\Scripts\Snow_Scan.bat
