@@ -1,15 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Drawing;
-using System.IO;
+﻿using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json;
+using System.Data;
 using System.Net;
 using System.Security.Principal;
-using System.Text.Json;
-using System.Windows.Forms;
-using Microsoft.Extensions.Configuration;
-using Newtonsoft.Json;
-using TriumphSupportUtility.Components;
 using TriumphSupportUtility.Interfaces;
 using TriumphSupportUtility.Systems;
 using TriumphSupportUtility.Tools;
@@ -17,60 +10,33 @@ using TriumphSupportUtility.UIControllers;
 
 namespace TriumphSupportUtility_Client
 {
-    public partial class WinForm_AdminClient : Form
+    public partial class WinForm_AdminClient : WinForm_UserClient
     {
-        IConfiguration config;
-        private UIController_Button uiController_ToolButtons;
-        private Interface_TcpClient agentController_TcpClient;
-        private SystemInfo_Base systemInfo_ThisPC;
-        private SystemService_Base systemService_Crowdstrike;
-        private SystemService_Base systemService_Dameware;
-        private SystemService_Base systemService_Teamviewer;
-        private SystemService_Base systemService_Zscaler;
-        private SystemService_Base systemService_Mimecast;
-        private SystemService_Base systemService_SnowInventoryAgent;
-        private SystemService_Base systemService_MsOffice365;
-        private SystemService_Base systemService_MsTeams;
-        private SystemService_Base systemService_ArcticWolf;
-        private Tool_Base tool_TeamViewer;
-        private Tool_VBS tool_MapDrives;
-        private Tool_CMD tool_SnowAgentScan;
-        private bool isElevated;
+        protected SystemService_Base systemService_Crowdstrike;
+        protected SystemService_Base systemService_Dameware;
+        protected SystemService_Base systemService_Teamviewer;
+        protected SystemService_Base systemService_Zscaler;
+        protected SystemService_Base systemService_Mimecast;
+        protected SystemService_Base systemService_SnowInventoryAgent;
+        protected SystemService_Base systemService_MsOffice365;
+        protected SystemService_Base systemService_MsTeams;
+        protected SystemService_Base systemService_ArcticWolf;
+        protected Tool_CMD tool_SnowAgentScan;
 
+        private void WinForm_AdminClient_Load(object sender, EventArgs e)
+        {
+            if (!this.DesignMode)
+                Init();
+        }
         public WinForm_AdminClient()
         {
             InitializeComponent();
-            Init();
         }
 
-        private void Display_AgentController_ConnectionStatus()
+        new protected void Display_Systems_GeneralInformation()
         {
-            if (agentController_TcpClient.isOnline && agentController_TcpClient.isLoopback)
-            {
-                Label_ConnectionState.Text = $"Connection Success @ {agentController_TcpClient.ipv4Address} [{agentController_TcpClient.hostName.ToUpper()}]";
-                Label_ConnectionState.ForeColor = Color.Green;
-            }
-            else if (agentController_TcpClient.isOnline)
-            {
-                Label_ConnectionState.Text = $"Connection Success @ {agentController_TcpClient.ipv4Address} [{agentController_TcpClient.hostName.ToUpper()}]";
-                Label_ConnectionState.ForeColor = Color.Green;
-            }
-            else
-            {
-                Label_ConnectionState.Text = $"Connection Unsuccessful @ {agentController_TcpClient.ipv4Address} [{agentController_TcpClient.hostName.ToUpper()}]";
-                Label_ConnectionState.ForeColor = Color.Red;
-            }
-        }
-        private void Display_Systems_GeneralInformation()
-        {
-            UIController_Textbox.SetTextboxText(TextBox_UsernameOutput, systemInfo_ThisPC.userName);
-            UIController_Textbox.SetTextboxText(TextBox_HostnameOutput, systemInfo_ThisPC.hostName);
-            UIController_Textbox.SetTextboxText(TextBox_DomainNameOutput, systemInfo_ThisPC.domainName);
-            UIController_Textbox.SetTextboxText(TextBox_Ipv4AddressOutput, systemInfo_ThisPC.ipv4Address);
+            base.Display_Systems_GeneralInformation();
             UIController_Textbox.SetTextboxText(TextBox_SubnetMaskOutput, systemInfo_ThisPC.subnetMask);
-            UIController_Textbox.SetTextboxText(TextBox_LanMacAddressOutput, systemInfo_ThisPC.lanMacAddress);
-            UIController_Textbox.SetTextboxText(TextBox_WlanMacAddressOutput, systemInfo_ThisPC.wlanMacAddress);
-            UIController_Textbox.SetTextboxText(TextBox_LogonServerOutput, systemInfo_ThisPC.logonServer);
 
             UIController_Textbox.SetTextboxText_IsInstalled(systemService_Crowdstrike.isInstalled, systemService_Crowdstrike.isRunning, TextBox_CrowdstrikeOutput);
             UIController_Textbox.SetTextboxText_IsInstalled(systemService_Dameware.isInstalled, TextBox_DamewareOutput);
@@ -91,7 +57,7 @@ namespace TriumphSupportUtility_Client
             UIController_Textbox.SetTextboxText(TextBox_UptimeOutput, systemInfo_ThisPC.uptime);
             UIController_Textbox.SetTextboxText(TextBox_BuildDateOutput, systemInfo_ThisPC.buildDate);
         }
-        private void Init()
+        new protected void Init()
         {
             UIController_Textbox.SetTextboxText(TextBox_ProgStateOut, "Loading Information. . .", Color.DarkOrange);
 
@@ -108,25 +74,13 @@ namespace TriumphSupportUtility_Client
 
             UIController_Textbox.SetTextboxText(TextBox_ProgStateOut, "Ready", Color.Green);
         }
-        private void Init_Config()
-        {
-            if (!File.Exists("config.json"))
-                TriumphSupportUtility.Components.Configuration.ClientConfiguration_Rebuild();
-            config = new ConfigurationBuilder().AddJsonFile("config.json").Build();
-        }
-        private void Init_ProgramInfo()
-        {
-            Label_ProgTitle.Text = config.GetSection("ProgramInformation:ProgramName").Get<string>().ToUpper();
-            Label_ProgSubTitle.Text = $"IT Service Desk - UK (Version {config.GetSection("ProgramInformation:Version").Get<string>()})";
-            Label_Author.Text = $"Author: {config.GetSection("ProgramInformation:Author").Get<string>()}";
-        }
-        private void Init_Interfaces()
+        new protected void Init_Interfaces()
         {
             agentController_TcpClient = new Interface_TcpClient(IPAddress.None.ToString(), 3027);
             WinForm_ClientConnect winForm_getClientAddress = new WinForm_ClientConnect(agentController_TcpClient);
             winForm_getClientAddress.ShowDialog();
         }
-        private void Init_Systems()
+        new protected void Init_Systems()
         {
             UIController_Textbox.SetTextboxText(TextBox_ProgStateOut, "Loading General Information. . .", Color.Orange);
 
@@ -159,7 +113,7 @@ namespace TriumphSupportUtility_Client
             else
                 UIController_Textbox.SetTextboxText(TextBox_ProgStateOut, "Not Loaded General Information; Ready", Color.Orange);
         }
-        private void Init_Tools()
+        new protected void Init_Tools()
         {
             uiController_ToolButtons = new UIController_Button();
             uiController_ToolButtons.SetUIElementButtons(TabControl_Tools.TabPages.Cast<TabPage>().SelectMany(tabPage => tabPage.Controls.Cast<Control>().OfType<Button>()).ToList());
@@ -202,11 +156,7 @@ namespace TriumphSupportUtility_Client
         }
 
         #region WinForm_Butttons
-        private void Button_ReTarget_Click(object sender, EventArgs e)
-        {
-            Init();
-        }
-        public void Button_Refresh_Click(object sender, EventArgs e)
+        new protected void Button_Refresh_Click(object sender, EventArgs e)
         {
             Button_Refresh.Enabled = false;
             Display_AgentController_ConnectionStatus();
@@ -215,64 +165,13 @@ namespace TriumphSupportUtility_Client
             Display_Systems_GeneralInformation();
             Button_Refresh.Enabled = true;
         }
-
-        //User Tools
-        private async void Button_LaunchTeamviewer_Click(object sender, EventArgs e)
+        protected void Button_ReTarget_Click(object sender, EventArgs e)
         {
-            UIController_Textbox.SetTextboxText(TextBox_ProgStateOut, $"Launching {tool_TeamViewer.toolName}. . .", Color.Orange);
-
-            this.Enabled = false;
-            UIController_ProgressBar progressBarController = new UIController_ProgressBar(ProgressBar_ProgProgressBar, Label_ProgProgressPct, Label_ProgProgressStatusOut);
-
-            if (await tool_TeamViewer.LaunchToolAsync(progressBarController))
-                UIController_Textbox.SetTextboxText(TextBox_ProgStateOut, $"{tool_TeamViewer.toolName} Launch Successful; Ready", Color.Green);
-            else
-                UIController_Textbox.SetTextboxText(TextBox_ProgStateOut, $"{tool_TeamViewer.toolName} Launch Unsuccessful, Verify Install; Ready", Color.DarkOrange);
-
-            progressBarController.Reset();
-            this.Enabled = true;
-        }
-        private async void Button_LaunchMapDrives_Click(object sender, EventArgs e)
-        {
-            UIController_Textbox.SetTextboxText(TextBox_ProgStateOut, $"Launching {tool_MapDrives.toolName}. . .", Color.Orange);
-
-            this.Enabled = false;
-            UIController_ProgressBar progressBarController = new UIController_ProgressBar(ProgressBar_ProgProgressBar, Label_ProgProgressPct, Label_ProgProgressStatusOut);
-
-            if (await tool_MapDrives.LaunchToolAsync(progressBarController, CheckBox_ShellExecVisibility.Checked))
-                UIController_Textbox.SetTextboxText(TextBox_ProgStateOut, $"{tool_MapDrives.toolName} Successful; Ready", Color.Green);
-            else
-                UIController_Textbox.SetTextboxText(TextBox_ProgStateOut, $"{tool_MapDrives.toolName} Drives Unsuccessful, Verify Network; Ready", Color.DarkOrange);
-
-            progressBarController.Reset();
-            this.Enabled = true;
-        }
-        private void Button_LaunchPrinterInstall_Click(object sender, EventArgs e)
-        {
-            this.Enabled = false;
-            WinForm_PrinterInstall printerInstall = new WinForm_PrinterInstall();
-            printerInstall.ShowDialog(this);
-
-            if (printerInstall.DialogResult == DialogResult.OK)
-                UIController_Textbox.SetTextboxText(TextBox_ProgStateOut, "Printer Install Successful; Ready", Color.Green);
-            else if (printerInstall.DialogResult == DialogResult.Cancel)
-                UIController_Textbox.SetTextboxText(TextBox_ProgStateOut, "Printer Install Terminated; Ready", Color.DarkOrange);
-            else
-                UIController_Textbox.SetTextboxText(TextBox_ProgStateOut, "Printer Install Unsuccessful, Verify Network & UAC; Ready", Color.Red);
-
-            this.Enabled = true;
+            Init();
         }
 
         //Admin Tools
-        private void Button_LaunchMessageBroadcast_Click(object sender, EventArgs e)
-        {
-            this.Enabled = false;
-            WinForm_BroadcastNotification broadcastNotification = new WinForm_BroadcastNotification(config);
-            broadcastNotification.ShowDialog(this);
-
-            this.Enabled = true;
-        }
-        private async void Button_LaunchSnowScan_Click(object sender, EventArgs e)
+        protected async void Button_LaunchSnowScan_ClickAsync(object sender, EventArgs e)
         {
             UIController_Textbox.SetTextboxText(TextBox_ProgStateOut, $"Launching {tool_SnowAgentScan.toolName}. . .", Color.Orange);
 
@@ -287,36 +186,13 @@ namespace TriumphSupportUtility_Client
             progressBarController.Reset();
             this.Enabled = true;
         }
+        protected void Button_LaunchMessageBroadcast_Click(object sender, EventArgs e)
+        {
+            this.Enabled = false;
+            WinForm_BroadcastNotification broadcastNotification = new WinForm_BroadcastNotification(config);
+            broadcastNotification.ShowDialog(this);
 
-        //Resources
-        private void Button_LaunchWindchill_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo { FileName = config.GetSection("ProgramParameters:Tools:Resources:Windchill:Link").Get<string>(), UseShellExecute = true });
-            UIController_Textbox.SetTextboxText(TextBox_ProgStateOut, "Windchill Loaded; Ready", Color.Green);
-        }
-        private void Button_LaunchTriumphOnline_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo { FileName = config.GetSection("ProgramParameters:Tools:Resources:TOL:Link").Get<string>(), UseShellExecute = true });
-            UIController_Textbox.SetTextboxText(TextBox_ProgStateOut, "Triumph Online Loaded; Ready", Color.Green);
-        }
-        private void Button_LaunchWakeOnLAN_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo { FileName = config.GetSection("ProgramParameters:Tools:Resources:WOL:Link").Get<string>(), UseShellExecute = true });
-            UIController_Textbox.SetTextboxText(TextBox_ProgStateOut, "Wake On LAN Loaded; Ready", Color.Green);
-
-        }
-        #endregion
-
-        #region WinForm_LinkLabels
-        private void LinkLabel_SysAid_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo { FileName = config.GetSection("ProgramParameters:Links:SysAid:Link").Get<string>(), UseShellExecute = true });
-            UIController_Textbox.SetTextboxText(TextBox_ProgStateOut, "SysAid Loaded;\r\nReady", Color.Green);
-        }
-        private void LinkLabel_ReportABug_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo { FileName = config.GetSection("ProgramParameters:Links:ReportABug:Link").Get<string>(), UseShellExecute = true });
-            UIController_Textbox.SetTextboxText(TextBox_ProgStateOut, "Report a Bug Loaded;\r\nReady", Color.Green);
+            this.Enabled = true;
         }
         #endregion
     }

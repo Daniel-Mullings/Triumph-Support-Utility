@@ -47,8 +47,12 @@
     <Compile Update="WinForms_Ancillaries\WinForm_PrinterInstall.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
-    <Compile Update="WinForm_UserClient.cs" />
-    <Compile Update="WinForm_AdminClient.cs" />
+    <Compile Update="WinForm_AdminClient.cs">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="WinForm_UserClient.cs">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Compile>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>

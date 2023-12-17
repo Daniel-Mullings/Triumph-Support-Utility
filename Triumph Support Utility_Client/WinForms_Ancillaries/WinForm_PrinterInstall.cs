@@ -31,6 +31,11 @@ namespace TriumphSupportUtility_Client
                 foreach (var sharePrinter in printerInstallObj.printerCollection)
                     ComboBox_PrinterList.Items.Add(sharePrinter);
             }
+            if (ComboBox_PrinterList.Items.Count == 0)
+            {
+                ComboBox_PrinterList.Text = "No Printers Available";
+                ComboBox_PrinterList.Enabled = false;
+            }
         }
 
         public WinForm_PrinterInstall()

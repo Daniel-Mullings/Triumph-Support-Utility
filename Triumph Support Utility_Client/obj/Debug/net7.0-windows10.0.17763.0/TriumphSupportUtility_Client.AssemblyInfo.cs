@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("TriumphSupportUtility_Client")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Triumph Support Utility - Client")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("TriumphSupportUtility_Client")]
-[assembly: System.Reflection.AssemblyTitleAttribute("TriumphSupportUtility_Client")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+89714f6576b3dafd36016b8ef2e3fd5f3357f349")]
+[assembly: System.Reflection.AssemblyProductAttribute("Triumph Support Utility - Client")]
+[assembly: System.Reflection.AssemblyTitleAttribute("Triumph Support Utility - Client")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 [assembly: System.Runtime.Versioning.TargetPlatformAttribute("Windows10.0.17763.0")]
 [assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("Windows10.0.17763.0")]

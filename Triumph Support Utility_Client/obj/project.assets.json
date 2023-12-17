@@ -2645,19 +2645,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Daniel.Mullings\\.nuget\\packages\\": {}
+    "C:\\Users\\Danie\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Daniel.Mullings\\Documents\\GitHub\\Triumph-Support-Utility\\Triumph Support Utility_Client\\TriumphSupportUtility_Client.csproj",
+      "projectUniqueName": "C:\\Users\\Danie\\Documents\\GitHub\\Triumph-Support-Utility\\Triumph Support Utility_Client\\TriumphSupportUtility_Client.csproj",
       "projectName": "Triumph Support Utility - Client",
-      "projectPath": "C:\\Users\\Daniel.Mullings\\Documents\\GitHub\\Triumph-Support-Utility\\Triumph Support Utility_Client\\TriumphSupportUtility_Client.csproj",
-      "packagesPath": "C:\\Users\\Daniel.Mullings\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Daniel.Mullings\\Documents\\GitHub\\Triumph-Support-Utility\\Triumph Support Utility_Client\\obj\\",
+      "projectPath": "C:\\Users\\Danie\\Documents\\GitHub\\Triumph-Support-Utility\\Triumph Support Utility_Client\\TriumphSupportUtility_Client.csproj",
+      "packagesPath": "C:\\Users\\Danie\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Danie\\Documents\\GitHub\\Triumph-Support-Utility\\Triumph Support Utility_Client\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Daniel.Mullings\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Danie\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

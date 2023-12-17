@@ -2,7 +2,7 @@ using System.Security.Principal;
 
 namespace TriumphSupportUtility_Client
 {
-    internal static class triumphSupportUtility_Client
+    internal static class TriumphSupportUtility_Client
     {
         /// <summary>
         ///  The main entry point for the application.

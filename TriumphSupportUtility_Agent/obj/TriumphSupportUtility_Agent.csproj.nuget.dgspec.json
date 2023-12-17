@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Daniel.Mullings\\Documents\\GitHub\\Triumph-Support-Utility\\TriumphSupportUtility_Agent\\TriumphSupportUtility_Agent.csproj": {}
+    "C:\\Users\\Danie\\Documents\\GitHub\\Triumph-Support-Utility\\TriumphSupportUtility_Agent\\TriumphSupportUtility_Agent.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Daniel.Mullings\\Documents\\GitHub\\Triumph-Support-Utility\\TriumphSupportUtility_Agent\\TriumphSupportUtility_Agent.csproj": {
+    "C:\\Users\\Danie\\Documents\\GitHub\\Triumph-Support-Utility\\TriumphSupportUtility_Agent\\TriumphSupportUtility_Agent.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Daniel.Mullings\\Documents\\GitHub\\Triumph-Support-Utility\\TriumphSupportUtility_Agent\\TriumphSupportUtility_Agent.csproj",
+        "projectUniqueName": "C:\\Users\\Danie\\Documents\\GitHub\\Triumph-Support-Utility\\TriumphSupportUtility_Agent\\TriumphSupportUtility_Agent.csproj",
         "projectName": "Triumph Support Utility - Agent",
-        "projectPath": "C:\\Users\\Daniel.Mullings\\Documents\\GitHub\\Triumph-Support-Utility\\TriumphSupportUtility_Agent\\TriumphSupportUtility_Agent.csproj",
-        "packagesPath": "C:\\Users\\Daniel.Mullings\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Daniel.Mullings\\Documents\\GitHub\\Triumph-Support-Utility\\TriumphSupportUtility_Agent\\obj\\",
+        "projectPath": "C:\\Users\\Danie\\Documents\\GitHub\\Triumph-Support-Utility\\TriumphSupportUtility_Agent\\TriumphSupportUtility_Agent.csproj",
+        "packagesPath": "C:\\Users\\Danie\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Danie\\Documents\\GitHub\\Triumph-Support-Utility\\TriumphSupportUtility_Agent\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Daniel.Mullings\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Danie\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
