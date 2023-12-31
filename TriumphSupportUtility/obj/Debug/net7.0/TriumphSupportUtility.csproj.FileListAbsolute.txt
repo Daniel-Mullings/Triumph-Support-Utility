@@ -1,0 +1,6 @@
+C:\Users\Danie\Documents\GitHub\Triumph-Support-Utility\TriumphSupportUtility\obj\Debug\net7.0\TriumphSupportUtility.csproj.AssemblyReference.cache
+C:\Users\Danie\Documents\GitHub\Triumph-Support-Utility\TriumphSupportUtility\obj\Debug\net7.0\TriumphSupportUtility.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Danie\Documents\GitHub\Triumph-Support-Utility\TriumphSupportUtility\obj\Debug\net7.0\TriumphSupportUtility.AssemblyInfoInputs.cache
+C:\Users\Danie\Documents\GitHub\Triumph-Support-Utility\TriumphSupportUtility\obj\Debug\net7.0\TriumphSupportUtility.AssemblyInfo.cs
+C:\Users\Danie\Documents\GitHub\Triumph-Support-Utility\TriumphSupportUtility\obj\Debug\net7.0\TriumphSupportUtility.csproj.CoreCompileInputs.cache
+C:\Users\Danie\Documents\GitHub\Triumph-Support-Utility\TriumphSupportUtility\obj\Debug\net7.0\TriumphSupportUtility.sourcelink.json

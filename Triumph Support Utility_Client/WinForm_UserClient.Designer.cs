@@ -49,6 +49,7 @@
             Label_Hostname = new Label();
             TextBox_LanMacAddressOutput = new TextBox();
             GroupBox_About = new GroupBox();
+            LinkLabel_SysAid = new LinkLabel();
             Label_DevelopedBy = new Label();
             Label_Author = new Label();
             LinkLabel_ReportABug = new LinkLabel();
@@ -315,6 +316,7 @@
             // 
             // GroupBox_About
             // 
+            GroupBox_About.Controls.Add(LinkLabel_SysAid);
             GroupBox_About.Controls.Add(Label_DevelopedBy);
             GroupBox_About.Controls.Add(Label_Author);
             GroupBox_About.Location = new Point(339, 284);
@@ -323,6 +325,17 @@
             GroupBox_About.TabIndex = 400;
             GroupBox_About.TabStop = false;
             GroupBox_About.Text = "About";
+            // 
+            // LinkLabel_SysAid
+            // 
+            LinkLabel_SysAid.AutoSize = true;
+            LinkLabel_SysAid.Location = new Point(6, 54);
+            LinkLabel_SysAid.Name = "LinkLabel_SysAid";
+            LinkLabel_SysAid.Size = new Size(42, 15);
+            LinkLabel_SysAid.TabIndex = 506;
+            LinkLabel_SysAid.TabStop = true;
+            LinkLabel_SysAid.Text = "SysAid";
+            LinkLabel_SysAid.LinkClicked += LinkLabel_SysAid_LinkClicked;
             // 
             // Label_DevelopedBy
             // 
@@ -338,7 +351,7 @@
             // 
             Label_Author.AutoSize = true;
             Label_Author.Font = new Font("Segoe UI", 9F);
-            Label_Author.Location = new Point(6, 39);
+            Label_Author.Location = new Point(6, 34);
             Label_Author.Name = "Label_Author";
             Label_Author.Size = new Size(132, 15);
             Label_Author.TabIndex = 402;
@@ -601,7 +614,7 @@
             Name = "WinForm_UserClient";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Triumph Support Utility - Client (User)";
-            Load += WinForm_UserClient_Load;
+            Load += OnLoad;
             ((System.ComponentModel.ISupportInitialize)PictureBox_ProgLogo).EndInit();
             GroupBox_GeneralInfo.ResumeLayout(false);
             GroupBox_GeneralInfo.PerformLayout();
@@ -659,5 +672,6 @@
         protected Button Button_LaunchPrinterInstall;
         protected Button Button_LaunchTeamviewer;
         protected Button Button_LaunchMapDrives;
+        protected LinkLabel LinkLabel_SysAid;
     }
 }

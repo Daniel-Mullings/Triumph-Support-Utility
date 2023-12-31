@@ -1,0 +1,77 @@
+{
+  "ProgramSettings": {
+    "ProgramParameters": {
+      "Name": "Triumph Support Utility",
+      "Version": "2.x",
+      "Type": "Client",
+      "Author": "Daniel Mullings",
+      "Links": {
+        "SysAid": {
+          "Link": "https://triumphmotorcycles.sysaidit.com/"
+        },
+        "ReportABug": {
+          "Link": "https://forms.office.com/e/TRQkzVyVab"
+        }
+      }
+    },
+    "ConnectionParameters": {
+      "TcpPort": 3027,
+      "UdpPort": 3028
+    },
+    "ToolParameters": {
+      "UserTools": {
+        "TeamViewer": {
+          "Name": "TeamViewer",
+          "ToolPathCollection_ToVerify": [
+            "C:\\Users\\Public\\Desktop\\Support.exe",
+            "C:\\Program Files (x86)\\TeamViewer\\Teamviewer.exe",
+            "C:\\Program Files\\TeamViewer\\Teamviewer.exe"
+          ],
+          "WaitToExit": false
+        },
+        "MapDrives": {
+          "Name": "Map Drives",
+          "ToolPathCollection_ToVerify": [
+            "C:\\Windows\\System32\\cscript.exe"
+          ],
+          "ToolWorkingPath": ".\\Scripts",
+          "ToolArgument": ".\\Map_Drives.vbs",
+          "WaitToExit": true
+        }
+      },
+      "AdminTools": {
+        "SnowScan": {
+          "Name": "Snow Inventory Agent Scan",
+          "ToolPathCollection_ToVerify": [
+            "C:\\Windows\\System32\\cmd.exe"
+          ],
+          "ToolWorkingPath": ".\\Scripts",
+          "ToolArgument": ".\\Snow_Scan.bat",
+          "WaitToExit": true
+        },
+        "BroadcastNotifications": {
+          "TitleCollection": [
+            "IT Service Desk - UK"
+          ],
+          "ClassificationCollection": [
+            "Information",
+            "Outage",
+            "Warning",
+            "Security"
+          ]
+        }
+      },
+      "Resources": {
+        "Windchill": {
+          "Link": "http://windchill.triumphdesigns.com/Windchill/app/"
+        },
+        "TOL": {
+          "Link": "https://triumphonline.net/Account/Login"
+        },
+        "WOL": {
+          "Link": "http://wol/"
+        }
+      }
+    }
+  }
+}

@@ -1,5 +1,6 @@
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
+using System.Net;
 using System.Security.Principal;
 using TriumphSupportUtility.Interfaces;
 using TriumphSupportUtility.Systems;
@@ -18,7 +19,7 @@ namespace TriumphSupportUtility_Client
         protected Tool_VBS tool_MapDrives;
         protected bool isElevated;
 
-        private void WinForm_UserClient_Load(object sender, EventArgs e)
+        protected virtual void OnLoad(object sender, EventArgs e)
         {
             if (!this.DesignMode)
                 Init();
@@ -28,7 +29,7 @@ namespace TriumphSupportUtility_Client
             InitializeComponent();
         }
 
-        protected void Display_AgentController_ConnectionStatus()
+        protected virtual void Display_AgentController_ConnectionStatus()
         {
             if (agentController_TcpClient.isOnline && agentController_TcpClient.isLoopback)
             {
@@ -46,7 +47,7 @@ namespace TriumphSupportUtility_Client
                 Label_ConnectionState.ForeColor = Color.Red;
             }
         }
-        protected void Display_Systems_GeneralInformation()
+        protected virtual void Display_Systems_GeneralInformation()
         {
             UIController_Textbox.SetTextboxText(TextBox_UsernameOutput, systemInfo_ThisPC.userName);
             UIController_Textbox.SetTextboxText(TextBox_HostnameOutput, systemInfo_ThisPC.hostName);
@@ -56,7 +57,7 @@ namespace TriumphSupportUtility_Client
             UIController_Textbox.SetTextboxText(TextBox_WlanMacAddressOutput, systemInfo_ThisPC.wlanMacAddress);
             UIController_Textbox.SetTextboxText(TextBox_LogonServerOutput, systemInfo_ThisPC.logonServer);
         }
-        protected void Init()
+        protected virtual void Init()
         {
             UIController_Textbox.SetTextboxText(TextBox_ProgStateOut, "Loading Information. . .", Color.DarkOrange);
 
@@ -73,23 +74,23 @@ namespace TriumphSupportUtility_Client
 
             UIController_Textbox.SetTextboxText(TextBox_ProgStateOut, "Ready", Color.Green);
         }
-        protected void Init_Config()
+        protected virtual void Init_Config()
         {
             if (!File.Exists("config.json"))
-                TriumphSupportUtility.Components.Configuration.ClientConfiguration_Rebuild();
+                TriumphSupportUtility.Core.Configuration.ClientConfiguration_Rebuild();
             config = new ConfigurationBuilder().AddJsonFile("config.json").Build();
         }
-        protected void Init_ProgramInfo()
+        protected virtual void Init_ProgramInfo()
         {
-            Label_ProgTitle.Text = config.GetSection("ProgramInformation:ProgramName").Get<string>().ToUpper();
-            Label_ProgSubTitle.Text = $"IT Service Desk - UK (Version {config.GetSection("ProgramInformation:Version").Get<string>()})";
-            Label_Author.Text = $"Author: {config.GetSection("ProgramInformation:Author").Get<string>()}";
+            Label_ProgTitle.Text = config.GetSection("ProgramSettings:ProgramParameters:Name").Get<string>().ToUpper();
+            Label_ProgSubTitle.Text = $"IT Service Desk - UK (Version {config.GetSection("ProgramSettings:ProgramParameters:Version").Get<string>()})";
+            Label_Author.Text = $"Author: Daniel Mullings";
         }
-        protected void Init_Interfaces()
+        protected virtual void Init_Interfaces()
         {
-            agentController_TcpClient = new Interface_TcpClient("127.0.0.1", 3027);
+            agentController_TcpClient = new Interface_TcpClient(IPAddress.Loopback.ToString(), config.GetSection("ProgramSettings:ConnectionParameters:TcpPort").Get<int>());
         }
-        protected void Init_Systems()
+        protected virtual void Init_Systems()
         {
             UIController_Textbox.SetTextboxText(TextBox_ProgStateOut, "Loading General Information. . .", Color.Orange);
 
@@ -104,7 +105,7 @@ namespace TriumphSupportUtility_Client
             else
                 UIController_Textbox.SetTextboxText(TextBox_ProgStateOut, "Not Loaded General Information; Ready", Color.Orange);
         }
-        protected void Init_Tools()
+        protected virtual void Init_Tools()
         {
             uiController_ToolButtons = new UIController_Button();
             uiController_ToolButtons.SetUIElementButtons(TabControl_Tools.TabPages.Cast<TabPage>().SelectMany(tabPage => tabPage.Controls.Cast<Control>().OfType<Button>()).ToList());
@@ -115,23 +116,23 @@ namespace TriumphSupportUtility_Client
                 try
                 {
                     tool_TeamViewer = new Tool_Base(
-                        config.GetSection("ProgramParameters:Tools:UserTools:TeamViewer:Name").Get<string>(),
-                        config.GetSection("ProgramParameters:Tools:UserTools:TeamViewer:ToolPath_ToVerify").Get<string[]>(),
-                        config.GetSection("ProgramParameters:Tools:UserTools:TeamViewer:WaitToExit").Get<bool>());
+                        config.GetSection("ProgramSettings:ToolParameters:UserTools:TeamViewer:Name").Get<string>(),
+                        config.GetSection("ProgramSettings:ToolParameters:UserTools:TeamViewer:ToolPathCollection_ToVerify").Get<string[]>(),
+                        config.GetSection("ProgramSettings:ToolParameters:UserTools:TeamViewer:WaitToExit").Get<bool>());
 
                     tool_MapDrives = new Tool_VBS(
-                        config.GetSection("ProgramParameters:Tools:UserTools:MapDrives:Name").Get<string>(),
-                        config.GetSection("ProgramParameters:Tools:UserTools:MapDrives:ToolPath_ToVerify").Get<string[]>(),
-                        config.GetSection("ProgramParameters:Tools:UserTools:MapDrives:ToolWorkingPath").Get<string>(),
-                        config.GetSection("ProgramParameters:Tools:UserTools:MapDrives:ToolArguments").Get<string>(),
-                        config.GetSection("ProgramParameters:Tools:UserTools:MapDrives:WaitToExit").Get<bool>());
+                        config.GetSection("ProgramSettings:ToolParameters:UserTools:MapDrives:Name").Get<string>(),
+                        config.GetSection("ProgramSettings:ToolParameters:UserTools:MapDrives:ToolPathCollection_ToVerify").Get<string[]>(),
+                        config.GetSection("ProgramSettings:ToolParameters:UserTools:MapDrives:ToolWorkingPath").Get<string>(),
+                        config.GetSection("ProgramSettings:ToolParameters:UserTools:MapDrives:ToolArgument").Get<string>(),
+                        config.GetSection("ProgramSettings:ToolParameters:UserTools:MapDrives:WaitToExit").Get<bool>());
 
                     initTools_isSuccess = true;
                 }
                 catch (Exception)
                 {
 
-                    TriumphSupportUtility.Components.Configuration.ClientConfiguration_Rebuild();
+                    TriumphSupportUtility.Core.Configuration.ClientConfiguration_Rebuild();
                 }
 
             } while (!initTools_isSuccess);
@@ -140,7 +141,7 @@ namespace TriumphSupportUtility_Client
         }
 
         #region WinForm_Butttons
-        protected void Button_Refresh_Click(object sender, EventArgs e)
+        protected virtual void Button_Refresh_Click(object sender, EventArgs e)
         {
             Button_Refresh.Enabled = false;
             Display_AgentController_ConnectionStatus();
@@ -151,7 +152,7 @@ namespace TriumphSupportUtility_Client
         }
 
         //User Tools
-        protected async void Button_LaunchTeamviewer_ClickAsync(object sender, EventArgs e)
+        protected virtual async void Button_LaunchTeamviewer_ClickAsync(object sender, EventArgs e)
         {
             UIController_Textbox.SetTextboxText(TextBox_ProgStateOut, $"Launching {tool_TeamViewer.toolName}. . .", Color.Orange);
 
@@ -166,7 +167,7 @@ namespace TriumphSupportUtility_Client
             progressBarController.Reset();
             this.Enabled = true;
         }
-        protected async void Button_LaunchMapDrives_ClickAsync(object sender, EventArgs e)
+        protected virtual async void Button_LaunchMapDrives_ClickAsync(object sender, EventArgs e)
         {
             UIController_Textbox.SetTextboxText(TextBox_ProgStateOut, $"Launching {tool_MapDrives.toolName}. . .", Color.Orange);
 
@@ -181,7 +182,7 @@ namespace TriumphSupportUtility_Client
             progressBarController.Reset();
             this.Enabled = true;
         }
-        protected void Button_LaunchPrinterInstall_Click(object sender, EventArgs e)
+        protected virtual void Button_LaunchPrinterInstall_Click(object sender, EventArgs e)
         {
             this.Enabled = false;
             WinForm_PrinterInstall printerInstall = new WinForm_PrinterInstall();
@@ -198,33 +199,33 @@ namespace TriumphSupportUtility_Client
         }
 
         //Resources
-        protected void Button_LaunchWindchill_Click(object sender, EventArgs e)
+        protected virtual void Button_LaunchWindchill_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo { FileName = config.GetSection("ProgramParameters:Tools:Resources:Windchill:Link").Get<string>(), UseShellExecute = true });
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo { FileName = config.GetSection("ProgramSettings:ToolParameters:Resources:Windchill:Link").Get<string>(), UseShellExecute = true });
             UIController_Textbox.SetTextboxText(TextBox_ProgStateOut, "Windchill Loaded; Ready", Color.Green);
         }
-        protected void Button_LaunchTriumphOnline_Click(object sender, EventArgs e)
+        protected virtual void Button_LaunchTriumphOnline_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo { FileName = config.GetSection("ProgramParameters:Tools:Resources:TOL:Link").Get<string>(), UseShellExecute = true });
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo { FileName = config.GetSection("ProgramSettings:ToolParameters:Resources:TOL:Link").Get<string>(), UseShellExecute = true });
             UIController_Textbox.SetTextboxText(TextBox_ProgStateOut, "Triumph Online Loaded; Ready", Color.Green);
         }
-        protected void Button_LaunchWakeOnLAN_Click(object sender, EventArgs e)
+        protected virtual void Button_LaunchWakeOnLAN_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo { FileName = config.GetSection("ProgramParameters:Tools:Resources:WOL:Link").Get<string>(), UseShellExecute = true });
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo { FileName = config.GetSection("ProgramSettings:ToolParameters:Resources:WOL:Link").Get<string>(), UseShellExecute = true });
             UIController_Textbox.SetTextboxText(TextBox_ProgStateOut, "Wake On LAN Loaded; Ready", Color.Green);
 
         }
         #endregion
 
         #region WinForm_LinkLabels
-        protected void LinkLabel_SysAid_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        protected virtual void LinkLabel_SysAid_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo { FileName = config.GetSection("ProgramParameters:Links:SysAid:Link").Get<string>(), UseShellExecute = true });
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo { FileName = config.GetSection("ProgramSettings:ProgramParameters:Links:SysAid:Link").Get<string>(), UseShellExecute = true });
             UIController_Textbox.SetTextboxText(TextBox_ProgStateOut, "SysAid Loaded;\r\nReady", Color.Green);
         }
-        protected void LinkLabel_ReportABug_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        protected virtual void LinkLabel_ReportABug_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo { FileName = config.GetSection("ProgramParameters:Links:ReportABug:Link").Get<string>(), UseShellExecute = true });
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo { FileName = config.GetSection("ProgramSettings:ProgramParameters:Links:ReportABug:Link").Get<string>(), UseShellExecute = true });
             UIController_Textbox.SetTextboxText(TextBox_ProgStateOut, "Report a Bug Loaded;\r\nReady", Color.Green);
         }
         #endregion

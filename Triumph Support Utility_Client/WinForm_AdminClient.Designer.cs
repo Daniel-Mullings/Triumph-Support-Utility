@@ -30,7 +30,6 @@ namespace TriumphSupportUtility_Client
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WinForm_AdminClient));
             Button_LaunchMessageBroadcast = new Button();
             Button_ReTarget = new Button();
             TextBox_BuildDateOutput = new TextBox();
@@ -299,7 +298,10 @@ namespace TriumphSupportUtility_Client
             // LinkLabel_ReportABug
             // 
             LinkLabel_ReportABug.Location = new Point(858, 9);
-            LinkLabel_ReportABug.LinkClicked += LinkLabel_ReportABug_LinkClicked;
+            // 
+            // Label_Author
+            // 
+            Label_Author.Location = new Point(6, 34);
             // 
             // Label_ProgSubTitle
             // 
@@ -309,18 +311,9 @@ namespace TriumphSupportUtility_Client
             // 
             Label_ConnectionState.Size = new Size(717, 17);
             // 
-            // Button_WakeOnLAN
-            // 
-            Button_WakeOnLAN.Click += Button_LaunchWakeOnLAN_Click;
-            // 
-            // Button_LaunchTriumphOnline
-            // 
-            Button_LaunchTriumphOnline.Click += Button_LaunchTriumphOnline_Click;
-            // 
             // Button_LaunchWindchill
             // 
             Button_LaunchWindchill.TabIndex = 304;
-            Button_LaunchWindchill.Click += Button_LaunchWindchill_Click;
             // 
             // TabPage_UserTools
             // 
@@ -336,18 +329,6 @@ namespace TriumphSupportUtility_Client
             TabControl_Tools.Controls.SetChildIndex(TabPage_AdminTools, 0);
             TabControl_Tools.Controls.SetChildIndex(TabPage_UserTools, 0);
             // 
-            // Button_LaunchPrinterInstall
-            // 
-            Button_LaunchPrinterInstall.Click += Button_LaunchPrinterInstall_Click;
-            // 
-            // Button_LaunchTeamviewer
-            // 
-            Button_LaunchTeamviewer.Click += Button_LaunchTeamviewer_ClickAsync;
-            // 
-            // Button_LaunchMapDrives
-            // 
-            Button_LaunchMapDrives.Click += Button_LaunchMapDrives_ClickAsync;
-            // 
             // Button_LaunchMessageBroadcast
             // 
             Button_LaunchMessageBroadcast.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
@@ -357,6 +338,7 @@ namespace TriumphSupportUtility_Client
             Button_LaunchMessageBroadcast.TabIndex = 307;
             Button_LaunchMessageBroadcast.Text = "Message Broadcast";
             Button_LaunchMessageBroadcast.UseVisualStyleBackColor = true;
+            Button_LaunchMessageBroadcast.Click += Button_LaunchMessageBroadcast_Click;
             // 
             // Button_ReTarget
             // 
@@ -366,6 +348,7 @@ namespace TriumphSupportUtility_Client
             Button_ReTarget.TabIndex = 201;
             Button_ReTarget.Text = "(Re)Target";
             Button_ReTarget.UseVisualStyleBackColor = true;
+            Button_ReTarget.Click += Button_ReTarget_Click;
             // 
             // TextBox_BuildDateOutput
             // 
@@ -800,6 +783,7 @@ namespace TriumphSupportUtility_Client
             Button_LaunchSnowScan.TabIndex = 308;
             Button_LaunchSnowScan.Text = "Snow Scan";
             Button_LaunchSnowScan.UseVisualStyleBackColor = true;
+            Button_LaunchSnowScan.Click += Button_LaunchSnowScan_ClickAsync;
             // 
             // WinForm_AdminClient
             // 
@@ -808,7 +792,6 @@ namespace TriumphSupportUtility_Client
             MinimumSize = new Size(963, 765);
             Name = "WinForm_AdminClient";
             Text = "Triumph Support Utility - Client (Admin)";
-            Load += WinForm_AdminClient_Load;
             ((System.ComponentModel.ISupportInitialize)PictureBox_ProgLogo).EndInit();
             GroupBox_GeneralInfo.ResumeLayout(false);
             GroupBox_GeneralInfo.PerformLayout();

@@ -4,29 +4,29 @@
     "C:\\Users\\Danie\\Documents\\GitHub\\Triumph-Support-Utility\\TriumphSupportUtility_Agent\\TriumphSupportUtility_Agent.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Danie\\Documents\\GitHub\\Triumph-Support-Utility\\TriumphSupportUtility_Agent\\TriumphSupportUtility_Agent.csproj": {
+    "C:\\Users\\Danie\\Documents\\GitHub\\Triumph-Support-Utility\\TriumphSupportUtility\\TriumphSupportUtility.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Danie\\Documents\\GitHub\\Triumph-Support-Utility\\TriumphSupportUtility_Agent\\TriumphSupportUtility_Agent.csproj",
-        "projectName": "Triumph Support Utility - Agent",
-        "projectPath": "C:\\Users\\Danie\\Documents\\GitHub\\Triumph-Support-Utility\\TriumphSupportUtility_Agent\\TriumphSupportUtility_Agent.csproj",
+        "projectUniqueName": "C:\\Users\\Danie\\Documents\\GitHub\\Triumph-Support-Utility\\TriumphSupportUtility\\TriumphSupportUtility.csproj",
+        "projectName": "TriumphSupportUtility",
+        "projectPath": "C:\\Users\\Danie\\Documents\\GitHub\\Triumph-Support-Utility\\TriumphSupportUtility\\TriumphSupportUtility.csproj",
         "packagesPath": "C:\\Users\\Danie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Danie\\Documents\\GitHub\\Triumph-Support-Utility\\TriumphSupportUtility_Agent\\obj\\",
+        "outputPath": "C:\\Users\\Danie\\Documents\\GitHub\\Triumph-Support-Utility\\TriumphSupportUtility\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Danie\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net7.0-windows10.0.17763.0"
+          "net8.0-windows10.0.17763.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net7.0-windows10.0.17763": {
-            "targetAlias": "net7.0-windows10.0.17763.0",
+          "net8.0-windows10.0.17763": {
+            "targetAlias": "net8.0-windows10.0.17763.0",
             "projectReferences": {}
           }
         },
@@ -37,20 +37,16 @@
         }
       },
       "frameworks": {
-        "net7.0-windows10.0.17763": {
-          "targetAlias": "net7.0-windows10.0.17763.0",
+        "net8.0-windows10.0.17763": {
+          "targetAlias": "net8.0-windows10.0.17763.0",
           "dependencies": {
-            "Microsoft.Extensions.DependencyInjection": {
+            "Microsoft.Extensions.Hosting": {
               "target": "Package",
               "version": "[8.0.0, )"
             },
-            "Microsoft.Extensions.Hosting": {
-              "target": "Package",
-              "version": "[7.0.1, )"
-            },
             "Microsoft.Extensions.Hosting.WindowsServices": {
               "target": "Package",
-              "version": "[7.0.1, )"
+              "version": "[8.0.0, )"
             },
             "Microsoft.Toolkit.Uwp.Notifications": {
               "target": "Package",
@@ -62,15 +58,19 @@
             },
             "System.DirectoryServices.AccountManagement": {
               "target": "Package",
-              "version": "[7.0.1, )"
+              "version": "[8.0.0, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[8.0.0, )"
             },
             "System.Management": {
               "target": "Package",
-              "version": "[7.0.2, )"
+              "version": "[8.0.0, )"
             },
             "System.ServiceProcess.ServiceController": {
               "target": "Package",
-              "version": "[7.0.1, )"
+              "version": "[8.0.0, )"
             }
           },
           "imports": [
@@ -101,7 +101,84 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Danie\\Documents\\GitHub\\Triumph-Support-Utility\\TriumphSupportUtility_Agent\\TriumphSupportUtility_Agent.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Danie\\Documents\\GitHub\\Triumph-Support-Utility\\TriumphSupportUtility_Agent\\TriumphSupportUtility_Agent.csproj",
+        "projectName": "Triumph Support Utility - Agent",
+        "projectPath": "C:\\Users\\Danie\\Documents\\GitHub\\Triumph-Support-Utility\\TriumphSupportUtility_Agent\\TriumphSupportUtility_Agent.csproj",
+        "packagesPath": "C:\\Users\\Danie\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Danie\\Documents\\GitHub\\Triumph-Support-Utility\\TriumphSupportUtility_Agent\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Danie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows10.0.17763.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows10.0.17763": {
+            "targetAlias": "net8.0-windows10.0.17763.0",
+            "projectReferences": {
+              "C:\\Users\\Danie\\Documents\\GitHub\\Triumph-Support-Utility\\TriumphSupportUtility\\TriumphSupportUtility.csproj": {
+                "projectPath": "C:\\Users\\Danie\\Documents\\GitHub\\Triumph-Support-Utility\\TriumphSupportUtility\\TriumphSupportUtility.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0-windows10.0.17763": {
+          "targetAlias": "net8.0-windows10.0.17763.0",
+          "dependencies": {
+            "Microsoft.Extensions.Hosting.WindowsServices": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.Windows.SDK.NET.Ref",
+              "version": "[10.0.17763.31, 10.0.17763.31]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.Windows.SDK.NET.Ref": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

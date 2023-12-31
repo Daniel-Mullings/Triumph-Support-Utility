@@ -23,17 +23,16 @@ namespace TriumphSupportUtility_Client
         protected SystemService_Base systemService_ArcticWolf;
         protected Tool_CMD tool_SnowAgentScan;
 
-        private void WinForm_AdminClient_Load(object sender, EventArgs e)
+        protected override void OnLoad(object sender, EventArgs e)
         {
-            if (!this.DesignMode)
-                Init();
+            base.OnLoad(sender, e);
         }
         public WinForm_AdminClient()
         {
             InitializeComponent();
         }
 
-        new protected void Display_Systems_GeneralInformation()
+        protected override void Display_Systems_GeneralInformation()
         {
             base.Display_Systems_GeneralInformation();
             UIController_Textbox.SetTextboxText(TextBox_SubnetMaskOutput, systemInfo_ThisPC.subnetMask);
@@ -57,7 +56,7 @@ namespace TriumphSupportUtility_Client
             UIController_Textbox.SetTextboxText(TextBox_UptimeOutput, systemInfo_ThisPC.uptime);
             UIController_Textbox.SetTextboxText(TextBox_BuildDateOutput, systemInfo_ThisPC.buildDate);
         }
-        new protected void Init()
+        protected override void Init()
         {
             UIController_Textbox.SetTextboxText(TextBox_ProgStateOut, "Loading Information. . .", Color.DarkOrange);
 
@@ -74,13 +73,13 @@ namespace TriumphSupportUtility_Client
 
             UIController_Textbox.SetTextboxText(TextBox_ProgStateOut, "Ready", Color.Green);
         }
-        new protected void Init_Interfaces()
+        protected override void Init_Interfaces()
         {
-            agentController_TcpClient = new Interface_TcpClient(IPAddress.None.ToString(), 3027);
+            agentController_TcpClient = new Interface_TcpClient(IPAddress.None.ToString(), config.GetSection("ProgramSettings:ConnectionParameters:TcpPort").Get<int>());
             WinForm_ClientConnect winForm_getClientAddress = new WinForm_ClientConnect(agentController_TcpClient);
             winForm_getClientAddress.ShowDialog();
         }
-        new protected void Init_Systems()
+        protected override void Init_Systems()
         {
             UIController_Textbox.SetTextboxText(TextBox_ProgStateOut, "Loading General Information. . .", Color.Orange);
 
@@ -113,7 +112,7 @@ namespace TriumphSupportUtility_Client
             else
                 UIController_Textbox.SetTextboxText(TextBox_ProgStateOut, "Not Loaded General Information; Ready", Color.Orange);
         }
-        new protected void Init_Tools()
+        protected override void Init_Tools()
         {
             uiController_ToolButtons = new UIController_Button();
             uiController_ToolButtons.SetUIElementButtons(TabControl_Tools.TabPages.Cast<TabPage>().SelectMany(tabPage => tabPage.Controls.Cast<Control>().OfType<Button>()).ToList());
@@ -124,30 +123,30 @@ namespace TriumphSupportUtility_Client
                 try
                 {
                     tool_TeamViewer = new Tool_Base(
-                        config.GetSection("ProgramParameters:Tools:UserTools:TeamViewer:Name").Get<string>(),
-                        config.GetSection("ProgramParameters:Tools:UserTools:TeamViewer:ToolPath_ToVerify").Get<string[]>(),
-                        config.GetSection("ProgramParameters:Tools:UserTools:TeamViewer:WaitToExit").Get<bool>());
+                        config.GetSection("ProgramSettings:ToolParameters:UserTools:TeamViewer:Name").Get<string>(),
+                        config.GetSection("ProgramSettings:ToolParameters:UserTools:TeamViewer:ToolPathCollection_ToVerify").Get<string[]>(),
+                        config.GetSection("ProgramSettings:ToolParameters:UserTools:TeamViewer:WaitToExit").Get<bool>());
 
                     tool_MapDrives = new Tool_VBS(
-                        config.GetSection("ProgramParameters:Tools:UserTools:MapDrives:Name").Get<string>(),
-                        config.GetSection("ProgramParameters:Tools:UserTools:MapDrives:ToolPath_ToVerify").Get<string[]>(),
-                        config.GetSection("ProgramParameters:Tools:UserTools:MapDrives:ToolWorkingPath").Get<string>(),
-                        config.GetSection("ProgramParameters:Tools:UserTools:MapDrives:ToolArguments").Get<string>(),
-                        config.GetSection("ProgramParameters:Tools:UserTools:MapDrives:WaitToExit").Get<bool>());
+                        config.GetSection("ProgramSettings:ToolParameters:UserTools:MapDrives:Name").Get<string>(),
+                        config.GetSection("ProgramSettings:ToolParameters:UserTools:MapDrives:ToolPathCollection_ToVerify").Get<string[]>(),
+                        config.GetSection("ProgramSettings:ToolParameters:UserTools:MapDrives:ToolWorkingPath").Get<string>(),
+                        config.GetSection("ProgramSettings:ToolParameters:UserTools:MapDrives:ToolArgument").Get<string>(),
+                        config.GetSection("ProgramSettings:ToolParameters:UserTools:MapDrives:WaitToExit").Get<bool>());
 
                     tool_SnowAgentScan = new Tool_CMD(
-                        config.GetSection("ProgramParameters:Tools:AdminTools:SnowScan:Name").Get<string>(),
-                        config.GetSection("ProgramParameters:Tools:AdminTools:SnowScan:ToolPath_ToVerify").Get<string[]>(),
-                        config.GetSection("ProgramParameters:Tools:AdminTools:SnowScan:ToolWorkingPath").Get<string>(),
-                        config.GetSection("ProgramParameters:Tools:AdminTools:SnowScan:ToolArguments").Get<string>(),
-                        config.GetSection("ProgramParameters:Tools:AdminTools:SnowScan:WaitToExit").Get<bool>());
+                        config.GetSection("ProgramSettings:ToolParameters:AdminTools:SnowScan:Name").Get<string>(),
+                        config.GetSection("ProgramSettings:ToolParameters:AdminTools:SnowScan:ToolPathCollection_ToVerify").Get<string[]>(),
+                        config.GetSection("ProgramSettings:ToolParameters:AdminTools:SnowScan:ToolWorkingPath").Get<string>(),
+                        config.GetSection("ProgramSettings:ToolParameters:AdminTools:SnowScan:ToolArgument").Get<string>(),
+                        config.GetSection("ProgramSettings:ToolParameters:AdminTools:SnowScan:WaitToExit").Get<bool>());
 
                     initTools_isSuccess = true;
                 }
                 catch (Exception)
                 {
 
-                    TriumphSupportUtility.Components.Configuration.ClientConfiguration_Rebuild();
+                    TriumphSupportUtility.Core.Configuration.ClientConfiguration_Rebuild();
                 }
 
             } while (!initTools_isSuccess);
@@ -156,7 +155,11 @@ namespace TriumphSupportUtility_Client
         }
 
         #region WinForm_Butttons
-        new protected void Button_Refresh_Click(object sender, EventArgs e)
+        protected virtual void Button_ReTarget_Click(object sender, EventArgs e)
+        {
+            Init();
+        }
+        protected override void Button_Refresh_Click(object sender, EventArgs e)
         {
             Button_Refresh.Enabled = false;
             Display_AgentController_ConnectionStatus();
@@ -165,13 +168,9 @@ namespace TriumphSupportUtility_Client
             Display_Systems_GeneralInformation();
             Button_Refresh.Enabled = true;
         }
-        protected void Button_ReTarget_Click(object sender, EventArgs e)
-        {
-            Init();
-        }
 
         //Admin Tools
-        protected async void Button_LaunchSnowScan_ClickAsync(object sender, EventArgs e)
+        protected virtual async void Button_LaunchSnowScan_ClickAsync(object sender, EventArgs e)
         {
             UIController_Textbox.SetTextboxText(TextBox_ProgStateOut, $"Launching {tool_SnowAgentScan.toolName}. . .", Color.Orange);
 
@@ -186,7 +185,7 @@ namespace TriumphSupportUtility_Client
             progressBarController.Reset();
             this.Enabled = true;
         }
-        protected void Button_LaunchMessageBroadcast_Click(object sender, EventArgs e)
+        protected virtual void Button_LaunchMessageBroadcast_Click(object sender, EventArgs e)
         {
             this.Enabled = false;
             WinForm_BroadcastNotification broadcastNotification = new WinForm_BroadcastNotification(config);

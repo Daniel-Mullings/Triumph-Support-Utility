@@ -1,0 +1,13 @@
+C:\Users\Danie\Documents\GitHub\Triumph-Support-Utility\TriumphSupportUtility\bin\Debug\net8.0-windows10.0.17763.0\TriumphSupportUtility.deps.json
+C:\Users\Danie\Documents\GitHub\Triumph-Support-Utility\TriumphSupportUtility\bin\Debug\net8.0-windows10.0.17763.0\TriumphSupportUtility.dll
+C:\Users\Danie\Documents\GitHub\Triumph-Support-Utility\TriumphSupportUtility\bin\Debug\net8.0-windows10.0.17763.0\TriumphSupportUtility.pdb
+C:\Users\Danie\Documents\GitHub\Triumph-Support-Utility\TriumphSupportUtility\obj\Debug\net8.0-windows10.0.17763.0\TriumphSupportUtility.csproj.AssemblyReference.cache
+C:\Users\Danie\Documents\GitHub\Triumph-Support-Utility\TriumphSupportUtility\obj\Debug\net8.0-windows10.0.17763.0\TriumphSupportUtility.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Danie\Documents\GitHub\Triumph-Support-Utility\TriumphSupportUtility\obj\Debug\net8.0-windows10.0.17763.0\TriumphSupportUtility.AssemblyInfoInputs.cache
+C:\Users\Danie\Documents\GitHub\Triumph-Support-Utility\TriumphSupportUtility\obj\Debug\net8.0-windows10.0.17763.0\TriumphSupportUtility.AssemblyInfo.cs
+C:\Users\Danie\Documents\GitHub\Triumph-Support-Utility\TriumphSupportUtility\obj\Debug\net8.0-windows10.0.17763.0\TriumphSupportUtility.csproj.CoreCompileInputs.cache
+C:\Users\Danie\Documents\GitHub\Triumph-Support-Utility\TriumphSupportUtility\obj\Debug\net8.0-windows10.0.17763.0\TriumphSupportUtility.sourcelink.json
+C:\Users\Danie\Documents\GitHub\Triumph-Support-Utility\TriumphSupportUtility\obj\Debug\net8.0-windows10.0.17763.0\TriumphSupportUtility.dll
+C:\Users\Danie\Documents\GitHub\Triumph-Support-Utility\TriumphSupportUtility\obj\Debug\net8.0-windows10.0.17763.0\refint\TriumphSupportUtility.dll
+C:\Users\Danie\Documents\GitHub\Triumph-Support-Utility\TriumphSupportUtility\obj\Debug\net8.0-windows10.0.17763.0\TriumphSupportUtility.pdb
+C:\Users\Danie\Documents\GitHub\Triumph-Support-Utility\TriumphSupportUtility\obj\Debug\net8.0-windows10.0.17763.0\ref\TriumphSupportUtility.dll
