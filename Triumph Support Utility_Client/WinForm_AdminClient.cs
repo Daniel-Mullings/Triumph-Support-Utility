@@ -157,7 +157,9 @@ namespace TriumphSupportUtility_Client
         #region WinForm_Butttons
         protected virtual void Button_ReTarget_Click(object sender, EventArgs e)
         {
+            Button_ReTarget.Enabled = false;
             Init();
+            Button_ReTarget.Enabled = true;
         }
         protected override void Button_Refresh_Click(object sender, EventArgs e)
         {
@@ -174,7 +176,7 @@ namespace TriumphSupportUtility_Client
         {
             UIController_Textbox.SetTextboxText(TextBox_ProgStateOut, $"Launching {tool_SnowAgentScan.toolName}. . .", Color.Orange);
 
-            this.Enabled = false;
+            this.TabControl_Tools.Enabled = false;
             UIController_ProgressBar progressBarController = new UIController_ProgressBar(ProgressBar_ProgProgressBar, Label_ProgProgressPct, Label_ProgProgressStatusOut);
 
             if (await tool_SnowAgentScan.LaunchToolAsync(progressBarController, CheckBox_ShellExecVisibility.Checked))
@@ -183,15 +185,15 @@ namespace TriumphSupportUtility_Client
                 UIController_Textbox.SetTextboxText(TextBox_ProgStateOut, $"{tool_SnowAgentScan.toolName} Unsuccessful, Verify Install & UAC; Ready", Color.DarkOrange);
 
             progressBarController.Reset();
-            this.Enabled = true;
+            this.TabControl_Tools.Enabled = true;
         }
         protected virtual void Button_LaunchMessageBroadcast_Click(object sender, EventArgs e)
         {
-            this.Enabled = false;
+            this.TabControl_Tools.Enabled = false;
             WinForm_BroadcastNotification broadcastNotification = new WinForm_BroadcastNotification(config);
             broadcastNotification.ShowDialog(this);
 
-            this.Enabled = true;
+            this.TabControl_Tools.Enabled = true;
         }
         #endregion
     }

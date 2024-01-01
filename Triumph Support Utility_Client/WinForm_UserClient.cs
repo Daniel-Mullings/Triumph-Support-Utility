@@ -156,7 +156,7 @@ namespace TriumphSupportUtility_Client
         {
             UIController_Textbox.SetTextboxText(TextBox_ProgStateOut, $"Launching {tool_TeamViewer.toolName}. . .", Color.Orange);
 
-            this.Enabled = false;
+            this.TabControl_Tools.Enabled = false;
             UIController_ProgressBar progressBarController = new UIController_ProgressBar(ProgressBar_ProgProgressBar, Label_ProgProgressPct, Label_ProgProgressStatusOut);
 
             if (await tool_TeamViewer.LaunchToolAsync(progressBarController))
@@ -165,13 +165,13 @@ namespace TriumphSupportUtility_Client
                 UIController_Textbox.SetTextboxText(TextBox_ProgStateOut, $"{tool_TeamViewer.toolName} Launch Unsuccessful, Verify Install; Ready", Color.DarkOrange);
 
             progressBarController.Reset();
-            this.Enabled = true;
+            this.TabControl_Tools.Enabled = true;
         }
         protected virtual async void Button_LaunchMapDrives_ClickAsync(object sender, EventArgs e)
         {
             UIController_Textbox.SetTextboxText(TextBox_ProgStateOut, $"Launching {tool_MapDrives.toolName}. . .", Color.Orange);
 
-            this.Enabled = false;
+            this.TabControl_Tools.Enabled = false;
             UIController_ProgressBar progressBarController = new UIController_ProgressBar(ProgressBar_ProgProgressBar, Label_ProgProgressPct, Label_ProgProgressStatusOut);
 
             if (await tool_MapDrives.LaunchToolAsync(progressBarController, CheckBox_ShellExecVisibility.Checked))
@@ -180,11 +180,11 @@ namespace TriumphSupportUtility_Client
                 UIController_Textbox.SetTextboxText(TextBox_ProgStateOut, $"{tool_MapDrives.toolName} Drives Unsuccessful, Verify Network; Ready", Color.DarkOrange);
 
             progressBarController.Reset();
-            this.Enabled = true;
+            this.TabControl_Tools.Enabled = true;
         }
         protected virtual void Button_LaunchPrinterInstall_Click(object sender, EventArgs e)
         {
-            this.Enabled = false;
+            this.TabControl_Tools.Enabled = false;
             WinForm_PrinterInstall printerInstall = new WinForm_PrinterInstall();
             printerInstall.ShowDialog(this);
 
@@ -195,7 +195,7 @@ namespace TriumphSupportUtility_Client
             else
                 UIController_Textbox.SetTextboxText(TextBox_ProgStateOut, "Printer Install Unsuccessful, Verify Network & UAC; Ready", Color.Red);
 
-            this.Enabled = true;
+            this.TabControl_Tools.Enabled = true;
         }
 
         //Resources
