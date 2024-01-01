@@ -67,7 +67,7 @@ namespace TriumphSupportUtility.Tools
                 Init_ToolProcess();
 
                 p_progressBar.Update("Starting process", 50);
-                await Task.Run(() => toolProc.Start());
+                await Task.Run(toolProc.Start);
 
                 p_progressBar.Update("Running process", 75);
                 if (!toolWaitForExit)
@@ -76,7 +76,7 @@ namespace TriumphSupportUtility.Tools
                     return true;
                 }
 
-                await Task.Run(() => toolProc.WaitForExit());
+                await Task.Run(toolProc.WaitForExit);
 
                 if (toolProc.ExitCode == 0)
                 {
@@ -221,7 +221,7 @@ namespace TriumphSupportUtility.Tools
                 Init_ToolProcess(p_shellExecuteVisible);
 
                 p_progressBar.Update("Starting process", 50);
-                await Task.Run(() => toolProc.Start());
+                await Task.Run(toolProc.Start);
 
                 toolProc.StandardInput.WriteLine(toolArgument);
                 toolProc.StandardInput.Close();
@@ -233,7 +233,7 @@ namespace TriumphSupportUtility.Tools
                     return true;
                 }
 
-                await Task.Run(() => toolProc.WaitForExit());
+                await Task.Run(toolProc.WaitForExit);
 
                 if (toolProc.ExitCode == 0)
                 {
@@ -306,7 +306,7 @@ namespace TriumphSupportUtility.Tools
                 Init_ToolProcess(p_shellExecuteVisible);
 
                 p_progressBar.Update("Starting process", 50);
-                await Task.Run(() => toolProc.Start());
+                await Task.Run(toolProc.Start);
 
                 p_progressBar.Update("Running process", 75);
                 if (!toolWaitForExit)
@@ -315,7 +315,7 @@ namespace TriumphSupportUtility.Tools
                     return true;
                 }
 
-                await Task.Run(() => toolProc.WaitForExit());
+                await Task.Run(toolProc.WaitForExit);
 
                 if (toolProc.ExitCode == 0)
                 {
